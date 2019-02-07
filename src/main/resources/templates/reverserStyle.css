@@ -16,3 +16,7 @@
     color: white;
     border: 0;
 }
+
+.submitbutton:focus {
+    outline: none;
+}
