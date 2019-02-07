@@ -1,22 +1,57 @@
-.submitbutton {
-    background-color: white;
-    border: 2px solid red;
+body, html{
+    margin:2px;
+    margin-right: 14px;
+    padding:0;
+}
+
+body {
+    width: 100%;
+    display: inline-block;
     text-align: center;
-    font-size: 24px;
+    align-content: center;
+
+}
+
+h1 {
+    font-size: 40px;
+    font-family: monospace;
+}
+
+.textInput {
+    height: 100%;
+    width: 100%;
+    font-size:25px;
+    background-color: #dddddd;
+    border: 2px solid gray;
+}
+
+.half {
+    height: 200px;
+    align-content: center;
+}
+
+.submitbutton {
+    font-family: monospace;
+    background-color: white;
+    border: 6px solid black;
+    width: 42%;
+    height: 100%;
+    font-size: 100px;
+    border-radius: 40px;
+    text-align: center;
+
 }
 
 .submitbutton:hover {
-    background-color: #ffad99;
+    background-color: grey;
     color: white;
-
 }
 
 .submitbutton:active {
-    background-color: red;
+    background-color: black;
     color: white;
-    border: 0;
 }
 
-.submitbutton:focus {
+.textInput , .submitbutton:focus {
     outline: none;
 }

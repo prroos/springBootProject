@@ -5,20 +5,24 @@
     <link rel="stylesheet" href="https://raw.githack.com/prroos/springBootProject/master/src/main/resources/templates/reverserStyle.css">
 </head>
 
+<h1>Text Reverser</h1>
+
 <body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-<div id="reverser">
-    <form>
-        <input type="text" ref="my_input" required>
-        <button class="submitbutton" @click.prevent="reverser()">Reverse</button>
-    </form>
+<form>
+    <div class="half">
+        <textarea class="textInput" placeholder="Write your text here!" type="text" @click.prevent="reverser()" required></textarea>
+    </div>
     <br>
+    <div class="half">
+        <button class="submitbutton">Reverse</button>
+    </div>
+</form>
+
     <b>Reversed text:</b>
 
     <p id = reversedText> {{ output }} <p/>
-</div>
 
 <script>
 
