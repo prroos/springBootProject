@@ -1,5 +1,17 @@
 button {
     background-color: white;
-    border-color: red;
-    border-width: 4px;
+    border: 2px solid red;
+    text-align: center;
+    font-size: 24px;
+}
+
+.button:hover {
+    background-color: grey;
+
+}
+
+.button:active {
+    background-color: red;
+    color: white;
+    border: 0;
 }
