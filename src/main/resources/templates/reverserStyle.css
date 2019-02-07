@@ -1,16 +1,16 @@
-button {
+.submitbutton {
     background-color: white;
     border: 2px solid red;
     text-align: center;
     font-size: 24px;
 }
 
-button:hover {
+.submitbutton:hover {
     background-color: grey;
 
 }
 
-button:active {
+.submitbutton:active {
     background-color: red;
     color: white;
     border: 0;

@@ -12,7 +12,7 @@
 <div id="reverser">
     <form>
         <input type="text" ref="my_input" required>
-        <button @click.prevent="reverser()">Get values</button>
+        <input type="submit" value="Reverse" class="submitbutton" @click.prevent="reverser()">
     </form>
     <p>Reversed text: {{ output }}<p/>
 </div>
