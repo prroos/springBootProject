@@ -29,7 +29,7 @@
 
             fetch('http://localhost:8080/reverse', {
                     method: "POST",
-                    body: String(this.$refs.my_input.value)
+                    body: " " + String(this.$refs.my_input.value)
                 }
             )
                 .then(function(response) {
