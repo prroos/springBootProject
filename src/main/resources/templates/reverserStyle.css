@@ -5,6 +5,12 @@
     font-size: 24px;
 }
 
+.submitbutton:hover {
+    background-color: #ffad99;
+    color: white;
+
+}
+
 .submitbutton:active {
     background-color: red;
     color: white;
