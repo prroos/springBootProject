@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="reverserStyle.css">
+</head>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="reverser">
+    <form>
+        <input type="text" ref="my_input">
+        <button @click.prevent="reverser()">Get values</button>
+    </form>
+    <p>Reversed text: {{ output }}<p/>
+</div>
+
+<script>
+
+    var app = new Vue({
+    el: '#reverser',
+    data: {
+        output: ''
+    },
+    methods: {
+        reverser() {
+
+            fetch('http://localhost:8080/reverse', {
+                    method: "POST",
+                    body: String(this.$refs.my_input.value)
+                }
+            )
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(response) {
+                    app.output = response;
+                });
+        }
+    }
+})
+
+</script>
+
+</body>
+</html>
