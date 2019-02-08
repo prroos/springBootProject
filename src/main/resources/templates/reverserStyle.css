@@ -13,8 +13,10 @@ body {
 }
 
 p {
-    width:50%;
+    width:80%;
     display: inline-block;
+    font-family: monospace;
+    font-size: 25px;
 }
 
 h1 {
