@@ -18,6 +18,10 @@ h1 {
     font-family: monospace;
 }
 
+#reversedText {
+    width: 80%;
+}
+
 .textInput {
     height: 200px;
     width: 95%;

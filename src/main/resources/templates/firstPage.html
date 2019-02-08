@@ -10,7 +10,7 @@
 <h1>Text Reverser</h1>
 <div id="reverser" class="half">
     <form>
-        <textarea class="textInput" placeholder="Write your text here!" ref="my_input" required>{{ output }}</textarea>
+        <textarea class="textInput" placeholder="Write your text here!" ref="my_input" required></textarea>
         <br>
         <br>
         <button class="submitbutton" @click.prevent="reverser()" >Reverse</button>
@@ -19,6 +19,7 @@
     <b>Reversed text:</b>
     <br>
     <br>
+    <p id="reversedText">{{ output }}</p>
 </div>
 
 
