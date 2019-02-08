@@ -45,6 +45,8 @@ h1 {
     height: 100%;
     font-size: 100px;
     border-radius: 40px;
+    transition-duration: 0.4s;
+    box-shadow: 5px 10px #888888;
     text-align: center;
 
 }
@@ -56,6 +58,7 @@ h1 {
 
 .submitbutton:active {
     background-color: black;
+    box-shadow: none;
     color: white;
 }
 
