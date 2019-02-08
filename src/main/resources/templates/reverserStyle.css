@@ -1,7 +1,6 @@
 body, html{
-    margin:2px;
-    margin-right: 14px;
-    padding:0;
+    background-color:#e5e3e3;
+    margin-top: 30px;
 }
 
 body {
@@ -9,7 +8,9 @@ body {
     display: inline-block;
     text-align: center;
     align-content: center;
-    margin-right: 20px;
+    align-content: center;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 p {
@@ -29,14 +30,22 @@ h1 {
     width: 95%;
     font-size:25px;
     background-color: #dddddd;
-    border: 2px solid gray;
+    border: 1px inline gray;
 }
 
 .half {
-    width: 100%;
+    display: inline-block;
+    width: 97%;
+    height: 800px;
     align-content: center;
     text-align: center;
     word-wrap: break-word;
+    background-color:white;
+    padding-top: 15px;
+    border-width: 6px;
+    border-style: outset;
+
+
 }
 
 .submitbutton {
