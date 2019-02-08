@@ -9,6 +9,7 @@ body {
     display: inline-block;
     text-align: center;
     align-content: center;
+    margin-right: 20px;
 
 }
 
@@ -18,23 +19,24 @@ h1 {
 }
 
 .textInput {
-    height: 100%;
-    width: 100%;
+    height: 200px;
+    width: 95%;
     font-size:25px;
     background-color: #dddddd;
     border: 2px solid gray;
 }
 
 .half {
-    height: 200px;
+    width: 100%;
     align-content: center;
+    position: absolute;
 }
 
 .submitbutton {
     font-family: monospace;
     background-color: white;
     border: 6px solid black;
-    width: 42%;
+    width: 30%;
     height: 100%;
     font-size: 100px;
     border-radius: 40px;

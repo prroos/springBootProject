@@ -5,24 +5,22 @@
     <link rel="stylesheet" href="https://raw.githack.com/prroos/springBootProject/master/src/main/resources/templates/reverserStyle.css">
 </head>
 
-<h1>Text Reverser</h1>
-
 <body>
-
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<form>
-    <div class="half">
-        <textarea class="textInput" placeholder="Write your text here!" type="text" @click.prevent="reverser()" required></textarea>
-    </div>
+<h1>Text Reverser</h1>
+<div id="reverser" class="half">
+    <form>
+        <textarea class="textInput" placeholder="Write your text here!" ref="my_input" required>{{ output }}</textarea>
+        <br>
+        <br>
+        <button class="submitbutton" @click.prevent="reverser()" >Reverse</button>
+    </form>
     <br>
-    <div class="half">
-        <button class="submitbutton">Reverse</button>
-    </div>
-</form>
-
     <b>Reversed text:</b>
+    <br>
+    <br>
+</div>
 
-    <p id = reversedText> {{ output }} <p/>
 
 <script>
 
@@ -33,7 +31,7 @@
     },
     methods: {
         reverser() {
-
+            console.log("worked!");
             fetch('http://localhost:8080/reverse', {
                     method: "POST",
                     body: " " + String(this.$refs.my_input.value)
