@@ -10,16 +10,16 @@ body {
     text-align: center;
     align-content: center;
     margin-right: 20px;
+}
 
+p {
+    width:50%;
+    display: inline-block;
 }
 
 h1 {
     font-size: 40px;
     font-family: monospace;
-}
-
-#reversedText {
-    width: 80%;
 }
 
 .textInput {
@@ -33,7 +33,8 @@ h1 {
 .half {
     width: 100%;
     align-content: center;
-    position: absolute;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .submitbutton {
