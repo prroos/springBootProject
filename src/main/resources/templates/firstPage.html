@@ -2,51 +2,55 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://raw.githack.com/prroos/springBootProject/master/src/main/resources/templates/reverserStyle.css">
+    <link rel="stylesheet"
+          href="https://raw.githack.com/prroos/springBootProject/master/src/main/resources/templates/reverserStyle.css">
 </head>
 
 <body>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/vue"></script>
 <h1>Text Reverser</h1>
-<div id="reverser" class="half">
-    <form>
-        <textarea class="textInput" placeholder="Write your text here!" ref="my_input" required></textarea>
-        <br>
-        <br>
-        <button class="submitbutton" @click.prevent="reverser()" >Reverse</button>
-    </form>
-    <br>
-    <b>Reversed text:</b>
-    <br>
-    <br>
-    <p>{{ output }}</p>
-</div>
-
+<div id="reverser"></div>
 
 <script>
 
     var app = new Vue({
-    el: '#reverser',
-    data: {
-        output: ''
-    },
-    methods: {
-        reverser() {
-            console.log("worked!");
-            fetch('http://localhost:8080/reverse', {
-                    method: "POST",
-                    body: " " + String(this.$refs.my_input.value)
-                }
-            )
-                .then(function(response) {
-                    return response.text();
-                })
-                .then(function(response) {
-                    app.output = response;
-                });
-        }
-    }
-})
+        el: '#reverser',
+        data: {
+            output: ''
+        },
+
+        methods: {
+            reverser() {
+                fetch('http://localhost:8080/reverse', {
+                        method: "POST",
+                        body: " " + String(this.$refs.my_input.value)
+                    }
+                )
+                    .then(function(response) {
+                        return response.text();
+                    })
+                    .then(function(response) {
+                        app.output = response;
+                    });
+            }
+        },
+
+        template:
+
+            `<div class="half">
+            <form>
+            <textarea class="textInput" placeholder="Write your text here!" ref="my_input" required></textarea>
+            <br>
+            <br>
+            <button class="submitbutton" v-on:click.prevent="reverser()">Reverse</button>
+            </form>
+            <br>
+            <b>Reversed text:</b>
+            <br>
+            <br>
+            <p>{{ output }}</p>
+            </div>`
+    })
 
 </script>
 
