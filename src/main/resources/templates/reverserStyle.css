@@ -35,16 +35,13 @@ h1 {
 .half {
     display: inline-block;
     width: 97%;
-    height: 800px;
+    min-height: 800px;
     align-content: center;
     text-align: center;
     word-wrap: break-word;
     background-color:white;
     padding-top: 15px;
-    border-width: 6px;
-    border-style: outset;
-
-
+    border: 6px outset;
 }
 
 .submitbutton {
